@@ -1,0 +1,14 @@
+{
+  "name": "my_movies",
+  "version": "1.0.0",
+  "description": "App that show list of movies",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MTU",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
