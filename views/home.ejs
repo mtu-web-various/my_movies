@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Movie Filter App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    </head>
+    <body>
+        <div class="jumbotron vertical-center">
+            <div class="container">
+                <h1 align="center">
+                    Dipsy's Movie List
+                </h1>
+            </div>
+        </div>
+        
+<div class="container">
+            <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Title&Poster</th>
+                <th>Year</th>
+                <th>Genre</th>
+                <th>Language</th>
+                <th>IMDB Rating</th>
+                <th>IMDB Votes</th>
+                <th>Director</th>
+                <th>Actors</th>
+                <th>Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        <% moviesData.forEach(function(data){ %>
+            <tr>    
+                <td><%= data["Title"] %><br/><img src="<%= data["Poster"] %>"style="width:175px;height:246px;"></td>
+                <td><%= data["Year"] %></td>
+                <td><%= data["Genre"] %></td>
+                <td><%= data["Language"] %></td>
+                <td><%= data["Ratings"][0]["Value"] %></td>
+                <td><%= data["imdbVotes"] %></td>
+                <td><%= data["Director"] %></td>
+                <td><%= data["Actors"] %></td>
+                <td><%= data["Plot"] %></td>
+            </tr>
+        <% }); %>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Title&Poster</th>
+                <th>Year</th>
+                <th>Genre</th>
+                <th>Language</th>
+                <th>IMDB Rating</th>
+                <th>IMDB Votes</th>
+                <th>Director</th>
+                <th>Actors</th>
+                <th>Summary</th>
+            </tr>
+        </tfoot>
+    </table>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+        <script>    $(document).ready(function() {
+            $('#example').DataTable();
+            } ); 
+            </script> 
+    </body>
+</html>

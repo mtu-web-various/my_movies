@@ -9,6 +9,9 @@
   "author": "MTU",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jsonfile": "^5.0.0",
+    "request": "^2.88.0"
   }
 }
